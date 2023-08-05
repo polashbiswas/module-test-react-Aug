@@ -1,0 +1,17 @@
+.nav-container {
+    display: flex;
+    background-color: #F05A22;
+    /* justify-content: space-between; */
+    align-items: center;
+    padding: 0.7rem;
+}
+
+.nav-links {
+    width: 300px;
+    display: flex;
+    background-color: #fff;
+    justify-content: space-around;
+    padding: 0.5rem;
+    border-radius: 20px;
+    margin-left: 26%;
+}
