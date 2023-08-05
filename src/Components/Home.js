@@ -30,9 +30,9 @@ const Home = () => {
     return (
         <div>
             <Navigation />
-            <div>
+            <div className="search-bar">
             <h1>Social Media For Travellers</h1>
-            <input type="text" className="search"/>
+            <input type="text" className="search" placeholder="Search here..."/>
             </div>
             <div className="home-container">
                 
