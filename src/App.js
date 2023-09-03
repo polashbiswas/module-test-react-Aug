@@ -1,19 +1,24 @@
-import React from "react";
-import Home from "./Components/Home";
-import Detail from "./Components/Detail";
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import logo from './logo.svg';
+import './App.css';
+import { Route, Routes, useState} from 'react-router-dom';
+import HomePage from './HomePage/HomePage';
+import History from './History/History';
+import Nav from './Navbar/Nav';
+import { Provider } from 'react-redux';
+import store from './store';
 
-const App = () => {
+function App() {
   return (
-    <div>
-      <Router>
+    <Provider store={store}>
+      <div className="App">
+        <Nav />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/item/:id" element={<Detail />} />
+          <Route path='/' element={<HomePage />}></Route>
+          <Route path='/history' element={<History />}></Route>
         </Routes>
-      </Router>
-    </div>
+      </div>
+    </Provider>
   );
-};
+}
 
 export default App;
